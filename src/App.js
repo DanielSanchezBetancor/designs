@@ -2,12 +2,15 @@ import "./App.css";
 import logo from "./logo.svg";
 
 import { useState } from "react";
+// Carousels
 import CarouselOne from "./components/CarouselOne/CarouselOne.js";
 import CarouselTwo from "./components/CarouselTwo/CarouselTwo.js";
 import CarouselThree from "./components/CarouselThree/CarouselThree.js";
 import CarouselFour from "./components/CarouselFour/CarouselFour.js";
 import CarouselFive from "./components/CarouselFive/CarouselFive.js";
 import CarouselSix from "./components/CarouselSix/CarouselSix.js";
+import CarouselSeven from "./components/CarouselSeven/CarouselSeven.js";
+// Category Card List
 import CategoryCardListOne from "./components/CategoryCardListOne/CategoryCardListOne.js";
 import CategoryCardListTwo from "./components/CategoryCardListTwo/CategoryCardListTwo.js";
 import CategoryCardListThree from "./components/CategoryCardListThree/CategoryCardListThree.js";
@@ -55,6 +58,10 @@ function App() {
                         <label>Carousel seis</label>
                     </section>
                     <CarouselSix />
+                    <section className={"divider"}>
+                        <label>Carousel siete</label>
+                    </section>
+                    <CarouselSeven />
                 </section>
             ) : (
                 ""
