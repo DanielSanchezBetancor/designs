@@ -1,5 +1,5 @@
 import Carousel from "better-react-carousel";
-// import "./CarouselOne.css";
+import "./CarouselOne.css";
 
 function CarouselOne() {
     return (
