@@ -1,0 +1,18 @@
+.hero-page__one {
+    position: relative;
+}
+.hero-page__background__one {
+    width: 100%;
+    max-height: 100vh;
+    opacity: 0.4;
+}
+.hero-page__introduction__one {
+    position:absolute;
+    font-size: 25px;
+    text-align: center;
+    bottom: 5%;
+    right: 5%;
+    color: #000000;
+    letter-spacing: -2px;
+    font-style: italic;
+}
