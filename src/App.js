@@ -15,12 +15,15 @@ import CategoryCardListOne from "./components/CategoryCardListOne/CategoryCardLi
 import CategoryCardListTwo from "./components/CategoryCardListTwo/CategoryCardListTwo.js";
 import CategoryCardListThree from "./components/CategoryCardListThree/CategoryCardListThree.js";
 import CategoryCardListFour from "./components/CategoryCardListFour/CategoryCardListFour.js";
+import CategoryCardListFive from "./components/CategoryCardListFive/CategoryCardListFive.js";
+import HeroPageOne from "./components/HeroPageOne/HeroPageOne.js";
 import NavbarOne from "./components/NavbarOne/NavbarOne.js";
 
 function App() {
     const [showCarousels, setShowCarousels] = useState(false);
     const [showCategoryCardList, setShowCategoryCardList] = useState(false);
     const [showNavbar, setShowNavbar] = useState(false);
+    const [showHeroPage, setShowHeroPage] = useState(false);
     return (
         <div className="App">
             <button onClick={() => setShowCarousels(!showCarousels)}>
@@ -32,6 +35,7 @@ function App() {
                 Category Card Lists
             </button>
             <button onClick={() => setShowNavbar(!showNavbar)}>Navbars</button>
+            <button onClick={() => setShowHeroPage(!showHeroPage)}>Hero Page</button>
             {showCarousels ? (
                 <section className="carousels">
                     <section className={"divider"}>
@@ -84,6 +88,10 @@ function App() {
                         <label>Categories Card List Cuatro</label>
                     </section>
                     <CategoryCardListFour />
+                    <section className={"divider"}>
+                        <label>Categories Card List Cinco</label>
+                    </section>
+                    <CategoryCardListFive />
                 </section>
             ) : (
                 ""
@@ -98,6 +106,14 @@ function App() {
             ) : (
                 ""
             )}
+            {showHeroPage ? (
+                <section className="hero-pages">
+                     <section className={"divider"}>
+                        <label>Hero Page Uno</label>
+                    </section>
+                    <HeroPageOne />
+                </section>
+            ) : ("")}
         </div>
     );
 }
