@@ -17,13 +17,17 @@ import CategoryCardListThree from "./components/CategoryCardListThree/CategoryCa
 import CategoryCardListFour from "./components/CategoryCardListFour/CategoryCardListFour.js";
 import CategoryCardListFive from "./components/CategoryCardListFive/CategoryCardListFive.js";
 import HeroPageOne from "./components/HeroPageOne/HeroPageOne.js";
+// Navbars
 import NavbarOne from "./components/NavbarOne/NavbarOne.js";
-
+import NavbarTwo from "./components/NavbarTwo/NavbarTwo.js";
+// Footers
+import FooterOne from "./components/FooterOne/FooterOne.js";
 function App() {
     const [showCarousels, setShowCarousels] = useState(false);
     const [showCategoryCardList, setShowCategoryCardList] = useState(false);
     const [showNavbar, setShowNavbar] = useState(false);
     const [showHeroPage, setShowHeroPage] = useState(false);
+    const [showFooters, setShowFooters] = useState(false);
     return (
         <div className="App">
             <button onClick={() => setShowCarousels(!showCarousels)}>
@@ -36,6 +40,7 @@ function App() {
             </button>
             <button onClick={() => setShowNavbar(!showNavbar)}>Navbars</button>
             <button onClick={() => setShowHeroPage(!showHeroPage)}>Hero Page</button>
+            <button onClick={() => setShowFooters(!showFooters)}>Footers</button>
             {showCarousels ? (
                 <section className="carousels">
                     <section className={"divider"}>
@@ -102,6 +107,10 @@ function App() {
                         <label>Navbar Uno</label>
                     </section>
                     <NavbarOne />
+                    <section className={"divider"}>
+                        <label>Navbar Dos</label>
+                    </section>
+                    <NavbarTwo />
                 </section>
             ) : (
                 ""
@@ -112,6 +121,14 @@ function App() {
                         <label>Hero Page Uno</label>
                     </section>
                     <HeroPageOne />
+                </section>
+            ) : ("")}
+            {showFooters ? (
+                <section className="footers">
+                    <section className={"divider"}>
+                        <label>Footer Uno</label>
+                    </section>
+                    <FooterOne />
                 </section>
             ) : ("")}
         </div>
